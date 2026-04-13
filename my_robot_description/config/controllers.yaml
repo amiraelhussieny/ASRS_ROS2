@@ -1,10 +1,10 @@
 controller_manager:
   ros__parameters:
-
-    update_rate: 100
+    update_rate: 50  
+    use_sim_time: true
 
     wheel_controller:
-      type: joint_group_velocity_controller/JointGroupVelocityController
+      type: velocity_controllers/JointGroupVelocityController
 
 wheel_controller:
   ros__parameters:
@@ -17,3 +17,8 @@ wheel_controller:
       - wheel_y2_joint
       - wheel_y3_joint
       - wheel_y4_joint
+    
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - velocity
