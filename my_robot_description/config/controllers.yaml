@@ -1,0 +1,19 @@
+controller_manager:
+  ros__parameters:
+
+    update_rate: 100
+
+    wheel_controller:
+      type: joint_group_velocity_controller/JointGroupVelocityController
+
+wheel_controller:
+  ros__parameters:
+    joints:
+      - wheel_x1_joint
+      - wheel_x2_joint
+      - wheel_x3_joint
+      - wheel_x4_joint
+      - wheel_y1_joint
+      - wheel_y2_joint
+      - wheel_y3_joint
+      - wheel_y4_joint
